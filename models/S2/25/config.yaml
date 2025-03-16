@@ -1,0 +1,20 @@
+model:
+  base_learning_rate: 1.0e-05
+  target: sources.models.Stage2.DCSNet
+  params:
+    dim: 32
+    n_denoise_res: 5
+    timesteps: 3
+    in_channels: 1
+    block_size: 32
+    patch_size: 64
+    linear_start: 0.1
+    linear_end: 0.99
+    s1_config:
+      target: sources.models.Stage1.DCSNet
+      params:
+        sr: 0.25
+        hidden_dim: 32
+        block_size: 32
+        in_channels: 1
+        stages: 18
