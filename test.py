@@ -37,7 +37,7 @@ if __name__ == "__main__":
     model.cuda()
     model.eval()
 
-    outdir = "results/DiT-CS/"+opt.testset+"/" + str(opt.sr) + "/"
+    outdir = "results/MP-DUN/"+opt.testset+"/" + str(opt.sr) + "/"
     os.makedirs(outdir, exist_ok=True)
     p_total = 0
     ssim_total = 0
